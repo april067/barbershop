@@ -1,0 +1,50 @@
+@mixin main-button($color: var(--main-color)) {
+	display: block;
+	width: 160px;
+	height: 40px;
+	border: 1px solid var(--accent-color);
+	border-radius: 25px;
+
+	font-size: px2rem(12);
+	line-height: 1.333;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: $color;
+
+	transition: color 250ms var(--timing-fn), background-color 250ms var(--timing-fn);
+
+	&:hover,
+	&:focus {
+		border: none;
+		background-color: var(--accent-color);
+	}
+}
+
+@mixin adaptiveValue($property, $startSize, $endSize, $type: 0) {
+	$maxWidth: 1920;
+	$maxContainerWidth: 1200;
+
+	$size: $startSize - $endSize;
+
+	@if $type==1 {
+		//only if less than container
+		#{$property}: $startSize * 1px;
+
+		@media (max-width: #{$maxContainerWidth * 1px}) {
+			#{$property}: calc(
+				#{$endSize} * 1px + #{$size} * ((100vw - 320px) / #{$maxContainerWidth - 320})
+			);
+		}
+	} @else if $type == 2 {
+		//only if more than container
+		#{$property}: $startSize * 1px;
+
+		@media (min-width: #{$maxContainerWidth * 1px}) {
+			#{$property}: calc(#{$endSize} * 1px + #{$size} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		// anyway
+		#{$property}: calc(#{$endSize}* 1px + #{$size} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}

@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./css/main.min.css" />
 		<title>BarberShop</title>
 	</head>
 	<body>
-		<h1>TEST</h1>
+		<header class="header">
+			<div class="container">
+				<a href="./index.html" class="logo">
+					<svg class="logo__icon">
+						<use href="./img/sprite.svg#logo"></use>
+					</svg>
+				</a>
+
+				<nav class="header__nav nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#about" class="nav__link">Про нас</a>
+						</li>
+						<li class="nav__item">
+							<a href="#prices" class="nav__link">Послуги та ціни</a>
+						</li>
+						<li class="nav__item">
+							<a href="#team" class="nav__link">Майстри</a>
+						</li>
+						<li class="nav__item">
+							<a href="#contacts" class="nav__link">Контакти</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__wrap">
+					<button class="header__main-button main-button" type="button">онлайн-запис</button>
+					<a class="header__tel-link" href="tel:+380447777777"> +380 44 777 77 77 </a>
+				</div>
+
+				<button class="header__mobmenu-button mobmenu__open" type="button">
+					<svg class="mobmenu__icon">
+						<use href="./img/sprite.svg#menu-open"></use>
+					</svg>
+				</button>
+			</div>
+		</header>
+		<section class="hero"></section>
 	</body>
 </html>

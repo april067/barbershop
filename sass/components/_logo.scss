@@ -1,0 +1,16 @@
+.logo {
+	display: block;
+	width: 70px;
+	height: 56px;
+}
+
+.logo__icon {
+	width: 70px;
+	height: 56px;
+
+	fill: var(--main-color);
+
+	@media screen and (min-width: 732px) {
+		fill: var(--secondary-color);
+	}
+}
