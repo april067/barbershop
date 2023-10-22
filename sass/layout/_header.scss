@@ -8,7 +8,7 @@
 		padding-top: 32px;
 	}
 
-	outline: 1px dashed rgb(196, 250, 0);
+	// outline: 1px dashed rgb(196, 250, 0);
 
 	& .container {
 		display: flex;
@@ -47,7 +47,7 @@
 .nav__link {
 	padding: 10px 0;
 
-	font-size: px2rem(12);
+	font-size: 12px;
 	line-height: 1.333;
 	font-weight: 600;
 	letter-spacing: 0.1em;
@@ -87,7 +87,7 @@
 	display: block;
 	padding: 10px 0;
 
-	font-size: px2rem(12);
+	font-size: 12px;
 	line-height: 1.333;
 	font-weight: 600;
 	letter-spacing: 0.1em;
