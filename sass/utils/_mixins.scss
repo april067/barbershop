@@ -21,30 +21,8 @@
 	}
 }
 
-@mixin adaptiveValue($property, $startSize, $endSize, $type: 0) {
-	$maxWidth: 1920;
-	$maxContainerWidth: 1200;
-
-	$size: $startSize - $endSize;
-
-	@if $type==1 {
-		//only if less than container
-		#{$property}: $startSize * 1px;
-
-		@media (max-width: #{$maxContainerWidth * 1px}) {
-			#{$property}: calc(
-				#{$endSize} * 1px + #{$size} * ((100vw - 320px) / #{$maxContainerWidth - 320})
-			);
-		}
-	} @else if $type == 2 {
-		//only if more than container
-		#{$property}: $startSize * 1px;
-
-		@media (min-width: #{$maxContainerWidth * 1px}) {
-			#{$property}: calc(#{$endSize} * 1px + #{$size} * ((100vw - 320px) / #{$maxWidth - 320}));
-		}
-	} @else {
-		// anyway
-		#{$property}: calc(#{$endSize}* 1px + #{$size} * ((100vw - 320px) / #{$maxWidth - 320}));
-	}
+@mixin adaptiveValue($property, $minSize, $maxSize, $minVW, $maxVW) {
+	#{$property}: calc(
+		$minSize * 1px + ($maxSize - $minSize) * (100vw - $minVW * 1px) / ($maxVW - $minVW)
+	);
 }

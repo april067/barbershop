@@ -36,7 +36,11 @@
 
 .nav__item {
 	&:not(:last-child) {
-		margin-right: 24px;
+		@include adaptiveValue(margin-right, 16, 24, 732, 768);
+
+		@media screen and (min-width: 768px) {
+			margin-right: 24px;
+		}
 
 		@media screen and (min-width: 1024px) {
 			margin-right: 40px;
