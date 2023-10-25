@@ -9,13 +9,17 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
 		<link rel="stylesheet" href="./css/main.min.css" />
 		<title>BarberShop</title>
 	</head>
 	<body>
 		<header class="header">
 			<div class="container">
-				<a href="./index.html" class="logo">
+				<a href="./index.html" class="logo animate__heartBeat">
 					<svg class="logo__icon">
 						<use href="./img/sprite.svg#logo"></use>
 					</svg>
@@ -64,7 +68,16 @@
 			<section class="hero">
 				<div class="hero__background">
 					<div class="container">
-						<aside class="hero__sidebar"></aside>
+						<aside class="hero__sidebar">
+							<ul class="hero__links">
+								<li class="hero__links-item">
+									<a class="hero__link" href="instagram.com">Instagram</a>
+								</li>
+								<li class="hero__links-item">
+									<a class="hero__link" href="youtube.com">Youtube</a>
+								</li>
+							</ul>
+						</aside>
 						<div class="hero__main">
 							<p class="hero__desc" lang="en">A hair salon for men in Kyiv</p>
 							<h1 lang="en" class="hero__title">BarberShop</h1>
@@ -73,10 +86,10 @@
 							</p>
 							<ul class="hero__buttons">
 								<li class="hero__buttons-item">
-									<button class="hero__button back">Назад</button>
+									<button class="hero__button back" type="button">Назад</button>
 								</li>
 								<li class="hero__buttons-item">
-									<button class="hero__button forward">Вперед</button>
+									<button class="hero__button forward" type="button">Вперед</button>
 								</li>
 							</ul>
 						</div>
