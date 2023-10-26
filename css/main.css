@@ -800,7 +800,7 @@ button {
 }
 
 .about__images {
-  width: 330px;
+  min-width: 330px;
   margin-right: 20px;
 }
 @media screen and (max-width: 731px) {
@@ -809,12 +809,10 @@ button {
   }
 }
 
-.about__images-item:nth-child(1) {
-  margin-bottom: 30px;
-}
-
-.about__img {
-  min-width: 330px;
+@media screen and (max-width: 1023px) {
+  .about__images-item:nth-child(1) {
+    margin-bottom: 30px;
+  }
 }
 
 .about__desc {
