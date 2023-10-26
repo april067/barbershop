@@ -94,18 +94,61 @@
 				<div class="container">
 					<ul class="about__images">
 						<li class="about__images-item">
-							<img
-								class="about__img"
-								src="./img/about/tab/1/about1-t.jpg"
-								alt="Перукар голить передню частину шиї"
-							/>
+							<picture>
+								<source
+									srcset="
+										./img/about/desk/1/about1-d.webp    270w,
+										./img/about/desk/1/about1-d@2x.webp 540w
+									"
+									sizes="270px"
+									type="image/webp"
+									media="(min-width: 1024px)"
+								/>
+								<source
+									srcset="
+										./img/about/tab/1/about1-t.webp    330w,
+										./img/about/tab/1/about1-t@2x.webp 660w
+									"
+									sizes="330px"
+									type="image/webp"
+									media="(min-width: 732px)"
+								/>
+
+								<img
+									class="about__img"
+									src="./img/about/tab/1/about1-t.jpg"
+									alt="Перукар голить передню частину шиї"
+								/>
+							</picture>
 						</li>
+
 						<li class="about__images-item">
-							<img
-								class="about__img"
-								src="./img/about/tab/2/about2-t.jpg"
-								alt="Перукар голить задню частину шиї"
-							/>
+							<picture>
+								<source
+									srcset="
+										./img/about/desk/2/about2-d.webp    270w,
+										./img/about/desk/2/about2-d@2x.webp 540w
+									"
+									sizes="270px"
+									type="image/webp"
+									media="(min-width: 1024px)"
+								/>
+								<source
+									srcset="
+										./img/about/tab/2/about2-t.webp    330w,
+										./img/about/tab/2/about2-t@2x.webp 660w
+									"
+									sizes="330px"
+									type="image/webp"
+									media="(min-width: 732px)"
+								/>
+
+								<img
+									class="about__img"
+									src="./img/about/tab/2/about2-t.jpg"
+									alt="Перукар голить задню частину шиї"
+								/>
+							</picture>
 						</li>
 					</ul>
 
