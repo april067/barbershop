@@ -45,9 +45,6 @@
 }
 
 .about__desc {
-	display: flex;
-	align-items: center;
-
 	@include section-description;
 
 	&::before {
