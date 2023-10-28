@@ -259,10 +259,6 @@ summary {
   overflow: hidden;
 }
 
-html {
-  font-size: 18px;
-}
-
 body {
   font-family: var(--main-text);
   font-size: 1.125rem;
@@ -808,10 +804,29 @@ button {
     display: none;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about__images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 570px;
+    margin-right: calc(30px + 34 * (100vw - 1024px) / 176);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__images {
+    margin-right: 64px;
+  }
+}
 
 @media screen and (max-width: 1023px) {
   .about__images-item:nth-child(1) {
     margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__images-item:nth-child(1) {
+    margin-right: 30px;
   }
 }
 
@@ -847,14 +862,30 @@ button {
   letter-spacing: 0.05em;
   color: var(--secondary-color);
 }
+@media screen and (max-width: 430px) {
+  .about__title {
+    max-width: 280px;
+  }
+}
 @media screen and (max-width: 480px) {
   .about__title {
     font-size: calc(20px + 8 * (100vw - 320px) / 160);
   }
 }
-@media screen and (max-width: 731px) {
+@media screen and (min-width: 431px) and (max-width: 731px) {
   .about__title {
     max-width: 320px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__title {
+    font-size: calc(36px + 6 * (100vw - 1024px) / 176);
+    line-height: 1.167;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__title {
+    font-size: 42px;
   }
 }
 
@@ -870,6 +901,11 @@ button {
 @media screen and (max-width: 480px) {
   .about__details {
     font-size: calc(14px + 2 * (100vw - 320px) / 160);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__details {
+    max-width: 470px;
   }
 }
 
@@ -892,6 +928,17 @@ button {
   .about__text {
     margin-top: calc(20px + 14 * (100vw - 732px) / 36);
     margin-bottom: calc(30px + 10 * (100vw - 732px) / 36);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__text {
+    margin-top: calc(20px + 8 * (100vw - 1024px) / 176);
+    max-width: 470px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__text {
+    margin-top: 28px;
   }
 }
 

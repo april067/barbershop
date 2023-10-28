@@ -55,6 +55,15 @@
 	font-weight: 700;
 	letter-spacing: 0.05em;
 	color: $color;
+
+	@media screen and (min-width: 1024px) {
+		@include adaptiveValue(font-size, 36, 42, 1024, 1200);
+		line-height: 1.167;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 42px;
+	}
 }
 
 @mixin section-details($color: var(--tertiary-color)) {
@@ -66,4 +75,8 @@
 	font-weight: 400;
 	letter-spacing: 0.02em;
 	color: $color;
+
+	@media screen and (min-width: 1024px) {
+		max-width: 470px;
+	}
 }
