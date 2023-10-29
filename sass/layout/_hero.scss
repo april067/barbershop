@@ -133,15 +133,7 @@
 }
 
 .hero__desc {
-	display: flex;
-	align-items: center;
-
-	text-transform: uppercase;
-	font-size: 11px;
-	line-height: 1.364;
-	font-weight: 600;
-	letter-spacing: 0.1em;
-	color: var(--quaternary-color-alfa60);
+	@include section-description(var(--quaternary-color-alfa60));
 
 	&::before {
 		@include before-line(var(--quaternary-color-alfa60));
@@ -170,11 +162,10 @@
 .hero__details {
 	width: 280px;
 
+	@include section-details(var(--quaternary-color));
+
 	font-size: 16px;
 	line-height: 1.625;
-	font-weight: 400;
-	letter-spacing: 0.02em;
-	color: var(--quaternary-color);
 
 	@media screen and (min-width: 732px) {
 		width: 360px;

@@ -112,4 +112,8 @@
 
 .about__main-button {
 	@include main-button(var(--secondary-color));
+
+	@media screen and (min-width: 732px) {
+		margin-top: 26px;
+	}
 }
