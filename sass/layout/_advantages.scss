@@ -15,6 +15,13 @@
 }
 
 .advantages__main {
+	@media screen and (min-width: 1024px) {
+		@include adaptiveValue(margin-right, 0, 70, 1024, 1200);
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 70px;
+	}
 }
 
 .advantages__desc {
@@ -62,11 +69,24 @@
 .advantages__counter {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 44px;
 
 	@media screen and (min-width: 732px) and (max-width: 1023px) {
 		width: 450px;
 		margin-left: auto;
+	}
+
+	@media screen and (max-width: 1023px) {
+		margin-top: 44px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		width: 370px;
+
+		@include adaptiveValue(margin-right, 40, 130, 1024, 1200);
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 130px;
 	}
 }
 
@@ -76,6 +96,7 @@
 	@media screen and (max-width: 480px) {
 		@include adaptiveValue(height, 90, 133, 320, 480);
 		@include adaptiveValue(width, 125, 194, 320, 480);
+
 		@include adaptiveValue(padding-left, 6, 35, 320, 480);
 		@include adaptiveValue(padding-right, 6, 35, 320, 480);
 		@include adaptiveValue(padding-top, 10, 28, 320, 480);
@@ -103,6 +124,11 @@
 
 	@media screen and (min-width: 732px) {
 		width: 210px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		width: 170px;
+		padding: 24px 20px;
 	}
 }
 
