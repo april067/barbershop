@@ -1,0 +1,130 @@
+.advantages {
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(padding-top, 60, 84, 320, 480);
+		@include adaptiveValue(padding-bottom, 60, 84, 320, 480);
+	}
+
+	padding: 84px 0;
+
+	@media screen and (min-width: 1024px) {
+		& .container {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.advantages__main {
+}
+
+.advantages__desc {
+	margin-bottom: 20px;
+
+	@include section-description;
+
+	&::before {
+		@include before-line;
+	}
+}
+
+.advantages__title {
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(max-width, 220, 280, 320, 480);
+
+		@include adaptiveValue(font-size, 20, 28, 320, 480);
+	}
+
+	@media screen and (min-width: 481px) and (max-width: 731px) {
+		max-width: 280px;
+	}
+
+	@include section-title;
+
+	@media screen and (min-width: 1024px) {
+		max-width: 410px;
+	}
+}
+
+.advantages__details {
+	margin-top: 20px;
+
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(font-size, 14, 16, 320, 480);
+	}
+
+	@include section-details;
+
+	@media screen and (min-width: 732px) {
+		max-width: 500px;
+	}
+}
+
+.advantages__counter {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 44px;
+}
+
+.advantages__meter {
+	padding: 28px 35px;
+
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(height, 90, 133, 320, 480);
+		@include adaptiveValue(width, 125, 194, 320, 480);
+		@include adaptiveValue(padding-left, 6, 35, 320, 480);
+		@include adaptiveValue(padding-right, 6, 35, 320, 480);
+		@include adaptiveValue(padding-top, 10, 28, 320, 480);
+		@include adaptiveValue(padding-bottom, 10, 28, 320, 480);
+	}
+
+	height: 133px;
+	width: 194px;
+	padding: 28px 35px;
+
+	text-align: center;
+	background-color: var(--background-color);
+
+	&:nth-child(2n + 1) {
+		margin-right: 30px;
+	}
+
+	&:not(:first-child) {
+		margin-top: 30px;
+	}
+
+	&:nth-child(2n + 3) {
+		margin-top: 0;
+	}
+}
+
+.advantages__pointer {
+	position: relative;
+
+	@include section-title;
+	font-family: var(--main-text);
+}
+
+.advantages__topic {
+	margin-top: 6px;
+
+	font-size: 11px;
+	line-height: 1.364;
+	font-weight: 600;
+	letter-spacing: 0em;
+	color: var(--secondary-color);
+}
+
+.advantages__icon {
+	position: absolute;
+	top: 0;
+
+	width: 13px;
+	height: 22px;
+
+	fill: var(--accent-color);
+
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(height, 18, 22, 320, 480);
+		@include adaptiveValue(width, 8, 13, 320, 480);
+	}
+}

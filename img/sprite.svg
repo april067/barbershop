@@ -32,5 +32,9 @@
 <symbol id="menu-open" viewBox="0 0 32 32">
 <path d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z"></path>
 </symbol>
+
+<symbol id="plus" viewBox="0 0 32 32">
+<path d="M13.472 17.972h-11.056v-4.944h11.056v-11.333h5v11.333h11.083v4.944h-11.083v11.278h-5v-11.278z"></path>
+</symbol>
 </defs>
 </svg>
