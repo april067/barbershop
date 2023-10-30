@@ -1,10 +1,5 @@
 .advantages {
-	@media screen and (max-width: 480px) {
-		@include adaptiveValue(padding-top, 60, 84, 320, 480);
-		@include adaptiveValue(padding-bottom, 60, 84, 320, 480);
-	}
-
-	padding: 84px 0;
+	@extend %section-padding;
 
 	@media screen and (min-width: 1024px) {
 		& .container {

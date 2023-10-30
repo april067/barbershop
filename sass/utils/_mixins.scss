@@ -22,6 +22,11 @@
 }
 
 @mixin before-line($background-color: var(--secondary-color), $margin-right: 20px) {
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(width, 40, 60, 320, 480);
+		@include adaptiveValue(margin-right, 10, 20, 320, 480);
+	}
+
 	content: '';
 	width: 60px;
 	height: 1px;
@@ -37,6 +42,11 @@
 }
 
 @mixin section-description($color: var(--secondary-color)) {
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(font-size, 9, 11, 320, 480);
+		@include adaptiveValue(letter-spacing, 0.45, 1.1, 320, 480);
+	}
+
 	display: flex;
 	align-items: center;
 

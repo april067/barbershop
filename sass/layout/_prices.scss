@@ -1,10 +1,5 @@
 .prices {
-	@media screen and (max-width: 480px) {
-		@include adaptiveValue(padding-top, 60, 84, 320, 480);
-		@include adaptiveValue(padding-bottom, 60, 84, 320, 480);
-	}
-
-	padding: 84px 0;
+	@extend %section-padding;
 
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,8 +13,6 @@
 	}
 
 	@media screen and (min-width: 732px) {
-		padding: 100px 0;
-
 		background-size: 768px;
 		background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
 			url('../img/prices/tab/prices-t.webp');
@@ -31,8 +24,6 @@
 	}
 
 	@media screen and (min-width: 1024px) {
-		padding: 130px 0;
-
 		background-size: 1280px;
 		background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
 			url('../img/prices/desk/prices-d.webp');
