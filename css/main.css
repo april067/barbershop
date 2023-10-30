@@ -1303,6 +1303,12 @@ button {
       flex-wrap: wrap;
   margin-top: 44px;
 }
+@media screen and (min-width: 732px) and (max-width: 1023px) {
+  .advantages__counter {
+    width: 450px;
+    margin-left: auto;
+  }
+}
 
 .advantages__meter {
   padding: 28px 35px;
@@ -1330,6 +1336,11 @@ button {
 }
 .advantages__meter:nth-child(2n+3) {
   margin-top: 0;
+}
+@media screen and (min-width: 732px) {
+  .advantages__meter {
+    width: 210px;
+  }
 }
 
 .advantages__pointer {
