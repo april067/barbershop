@@ -1,0 +1,44 @@
+.portfolio {
+	@extend %section-padding;
+}
+
+.portfolio__desc {
+	@include section-description;
+
+	&::before {
+		@include before-line;
+	}
+}
+
+.portfolio__list {
+	margin-top: 44px;
+
+	@media screen and (min-width: 732px) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+}
+
+.portfolio__item {
+	@media screen and (max-width: 731px) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (min-width: 732px) and (max-width: 768px) {
+		@include adaptiveValue(width, 312, 330, 732, 768);
+	}
+	@media screen and (min-width: 1200px) {
+		width: 330px;
+	}
+
+	@media screen and (min-width: 1024px) and (max-width: 1200px) {
+		@include adaptiveValue(width, 226, 270, 1024, 1200);
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 270px;
+	}
+}

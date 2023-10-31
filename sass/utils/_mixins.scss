@@ -42,11 +42,6 @@
 }
 
 @mixin section-description($color: var(--secondary-color)) {
-	@media screen and (max-width: 480px) {
-		@include adaptiveValue(font-size, 9, 11, 320, 480);
-		@include adaptiveValue(letter-spacing, 0.45, 1.1, 320, 480);
-	}
-
 	display: flex;
 	align-items: center;
 
@@ -57,6 +52,11 @@
 	font-weight: 600;
 	letter-spacing: 0.1em;
 	color: $color;
+
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(font-size, 9, 11, 320, 480);
+		@include adaptiveValue(letter-spacing, 0.45, 1.1, 320, 480);
+	}
 }
 
 @mixin section-title($color: var(--secondary-color)) {
@@ -66,6 +66,10 @@
 	font-weight: 700;
 	letter-spacing: 0.05em;
 	color: $color;
+
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(font-size, 20, 28, 320, 480);
+	}
 
 	@media screen and (min-width: 1024px) {
 		@include adaptiveValue(font-size, 36, 42, 1024, 1200);

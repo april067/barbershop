@@ -50,10 +50,6 @@
 		max-width: 280px;
 	}
 
-	@media screen and (max-width: 480px) {
-		@include adaptiveValue(font-size, 20, 28, 320, 480);
-	}
-
 	@media screen and (min-width: 431px) and (max-width: 731px) {
 		max-width: 320px;
 	}

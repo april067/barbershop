@@ -32,8 +32,6 @@
 .advantages__title {
 	@media screen and (max-width: 480px) {
 		@include adaptiveValue(max-width, 220, 280, 320, 480);
-
-		@include adaptiveValue(font-size, 20, 28, 320, 480);
 	}
 
 	@media screen and (min-width: 481px) and (max-width: 731px) {
