@@ -46,37 +46,24 @@
 }
 
 .prices__title {
-	@media screen and (max-width: 430px) {
-		max-width: 280px;
-	}
-
-	@media screen and (min-width: 431px) and (max-width: 731px) {
-		max-width: 320px;
-	}
-
 	@include section-title(var(--main_color));
 }
 
 .prices__list {
+	margin-top: 44px;
+	margin-bottom: 50px;
+
+	@media screen and (max-width: 1023px) {
+		padding: 30px;
+
+		background-image: linear-gradient(rgba(23, 26, 36), rgba(23, 26, 36, 0.2));
+	}
+
 	@media screen and (max-width: 480px) {
 		@include adaptiveValue(margin-top, 30, 44, 320, 480);
 		@include adaptiveValue(margin-bottom, 30, 50, 320, 480);
 		@include adaptiveValue(padding-left, 0, 30, 320, 480);
 		@include adaptiveValue(padding-right, 0, 30, 320, 480);
-	}
-
-	margin-top: 44px;
-	margin-bottom: 50px;
-
-	@media screen and (min-width: 480px) and (max-width: 1023px) {
-		padding: 30px;
-	}
-
-	@media screen and (max-width: 1023px) {
-		padding-top: 30px;
-		padding-bottom: 30px;
-
-		background-image: linear-gradient(rgba(23, 26, 36), rgba(23, 26, 36, 0.2));
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -85,14 +72,14 @@
 }
 
 .prices__list-item {
-	@media screen and (max-width: 480px) {
-		@include adaptiveValue(font-size, 12, 14, 320, 480);
-	}
-
 	font-size: 14px;
 	line-height: 2.143;
 	letter-spacing: 0.02em;
 	color: var(--quaternary-color);
+
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(font-size, 12, 14, 320, 480);
+	}
 
 	@media screen and (min-width: 1024px) {
 		width: 50%;

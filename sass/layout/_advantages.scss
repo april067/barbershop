@@ -30,15 +30,15 @@
 }
 
 .advantages__title {
-	@media screen and (max-width: 480px) {
-		@include adaptiveValue(max-width, 220, 280, 320, 480);
-	}
+	@include section-title;
 
-	@media screen and (min-width: 481px) and (max-width: 731px) {
+	@media screen and (max-width: 731px) {
 		max-width: 280px;
 	}
 
-	@include section-title;
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(max-width, 220, 280, 320, 480);
+	}
 
 	@media screen and (min-width: 1024px) {
 		max-width: 410px;
@@ -48,11 +48,11 @@
 .advantages__details {
 	margin-top: 20px;
 
+	@include section-details;
+
 	@media screen and (max-width: 480px) {
 		@include adaptiveValue(font-size, 14, 16, 320, 480);
 	}
-
-	@include section-details;
 
 	@media screen and (min-width: 732px) {
 		max-width: 500px;
@@ -84,7 +84,12 @@
 }
 
 .advantages__meter {
+	height: 133px;
+	width: 194px;
 	padding: 28px 35px;
+
+	text-align: center;
+	background-color: var(--background-color);
 
 	@media screen and (max-width: 480px) {
 		@include adaptiveValue(height, 90, 133, 320, 480);
@@ -95,13 +100,6 @@
 		@include adaptiveValue(padding-top, 10, 28, 320, 480);
 		@include adaptiveValue(padding-bottom, 10, 28, 320, 480);
 	}
-
-	height: 133px;
-	width: 194px;
-	padding: 28px 35px;
-
-	text-align: center;
-	background-color: var(--background-color);
 
 	&:nth-child(2n + 1) {
 		margin-right: 30px;

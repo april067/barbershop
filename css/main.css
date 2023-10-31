@@ -1101,16 +1101,6 @@ button {
   letter-spacing: 0.05em;
   color: var(--main_color);
 }
-@media screen and (max-width: 430px) {
-  .prices__title {
-    max-width: 280px;
-  }
-}
-@media screen and (min-width: 431px) and (max-width: 731px) {
-  .prices__title {
-    max-width: 320px;
-  }
-}
 @media screen and (max-width: 480px) {
   .prices__title {
     font-size: calc(20px + 8 * (100vw - 320px) / 160);
@@ -1132,25 +1122,19 @@ button {
   margin-top: 44px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 1023px) {
+  .prices__list {
+    padding: 30px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(23, 26, 36)), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(rgb(23, 26, 36), rgba(23, 26, 36, 0.2));
+  }
+}
 @media screen and (max-width: 480px) {
   .prices__list {
     margin-top: calc(30px + 14 * (100vw - 320px) / 160);
     margin-bottom: calc(30px + 20 * (100vw - 320px) / 160);
     padding-left: calc(0px + 30 * (100vw - 320px) / 160);
     padding-right: calc(0px + 30 * (100vw - 320px) / 160);
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 1023px) {
-  .prices__list {
-    padding: 30px;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .prices__list {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(23, 26, 36)), to(rgba(23, 26, 36, 0.2)));
-    background-image: linear-gradient(rgb(23, 26, 36), rgba(23, 26, 36, 0.2));
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1308,16 +1292,6 @@ button {
 }
 @media screen and (max-width: 480px) {
   .advantages__title {
-    max-width: calc(220px + 60 * (100vw - 320px) / 160);
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 731px) {
-  .advantages__title {
-    max-width: 280px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .advantages__title {
     font-size: calc(20px + 8 * (100vw - 320px) / 160);
   }
 }
@@ -1330,6 +1304,16 @@ button {
 @media screen and (min-width: 1200px) {
   .advantages__title {
     font-size: 42px;
+  }
+}
+@media screen and (max-width: 731px) {
+  .advantages__title {
+    max-width: 280px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .advantages__title {
+    max-width: calc(220px + 60 * (100vw - 320px) / 160);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1388,7 +1372,6 @@ button {
 }
 
 .advantages__meter {
-  padding: 28px 35px;
   height: 133px;
   width: 194px;
   padding: 28px 35px;
