@@ -1678,23 +1678,13 @@ button {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 732px) and (max-width: 768px) {
+@media screen and (min-width: 732px) {
   .portfolio__item {
-    width: calc(312px + 18 * (100vw - 732px) / 36);
+    width: calc((100% - 30px) / 2);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .portfolio__item {
-    width: 330px;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .portfolio__item {
-    width: calc(226px + 44 * (100vw - 1024px) / 176);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .portfolio__item {
-    width: 270px;
+    width: calc((100% - 90px) / 4);
   }
 }/*# sourceMappingURL=main.css.map */

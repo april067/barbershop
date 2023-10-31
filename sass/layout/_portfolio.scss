@@ -27,19 +27,11 @@
 		}
 	}
 
-	@media screen and (min-width: 732px) and (max-width: 768px) {
-		@include adaptiveValue(width, 312, 330, 732, 768);
+	@media screen and (min-width: 732px) {
+		width: calc((100% - 30px) / 2);
 	}
 
-	@media screen and (min-width: 768px) {
-		width: 330px;
-	}
-
-	@media screen and (min-width: 1024px) and (max-width: 1200px) {
-		@include adaptiveValue(width, 226, 270, 1024, 1200);
-	}
-
-	@media screen and (min-width: 1200px) {
-		width: 270px;
+	@media screen and (min-width: 1024px) {
+		width: calc((100% - 90px) / 4);
 	}
 }
