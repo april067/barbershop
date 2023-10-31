@@ -51,17 +51,11 @@ button {
 }
 
 .container {
-	@media screen and (max-width: 319px) {
-		background-color: aqua;
-	}
-
 	min-width: 320px;
 	max-width: 480px;
 
 	margin: 0 auto;
 	padding: 0 6.25vw;
-
-	// outline: 1px dashed rgb(0, 0, 0);
 
 	@media screen and (min-width: 480px) {
 		padding: 0 31px;
@@ -76,4 +70,11 @@ button {
 		max-width: 1200px;
 		padding: 0 15px;
 	}
+
+	// === service tools ===
+	@media screen and (max-width: 319px) {
+		background-color: aqua;
+	}
+	// outline: 1px dashed rgb(0, 0, 0);
+	// === END service tools ===
 }

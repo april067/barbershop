@@ -22,17 +22,17 @@
 }
 
 @mixin before-line($background-color: var(--secondary-color), $margin-right: 20px) {
-	@media screen and (max-width: 480px) {
-		@include adaptiveValue(width, 40, 60, 320, 480);
-		@include adaptiveValue(margin-right, 10, 20, 320, 480);
-	}
-
 	content: '';
 	width: 60px;
 	height: 1px;
 	margin-right: $margin-right;
 
 	background-color: $background-color;
+
+	@media screen and (max-width: 480px) {
+		@include adaptiveValue(width, 40, 60, 320, 480);
+		@include adaptiveValue(margin-right, 10, 20, 320, 480);
+	}
 }
 
 @mixin adaptiveValue($property, $minSize, $maxSize, $minVW, $maxVW) {

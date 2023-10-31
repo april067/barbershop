@@ -330,11 +330,6 @@ button {
   margin: 0 auto;
   padding: 0 6.25vw;
 }
-@media screen and (max-width: 319px) {
-  .container {
-    background-color: aqua;
-  }
-}
 @media screen and (min-width: 480px) {
   .container {
     padding: 0 31px;
@@ -350,6 +345,11 @@ button {
   .container {
     max-width: 1200px;
     padding: 0 15px;
+  }
+}
+@media screen and (max-width: 319px) {
+  .container {
+    background-color: aqua;
   }
 }
 
@@ -1683,7 +1683,7 @@ button {
     width: calc(312px + 18 * (100vw - 732px) / 36);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .portfolio__item {
     width: 330px;
   }
