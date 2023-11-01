@@ -61,6 +61,7 @@
 				</button>
 			</div>
 		</header>
+
 		<main>
 			<section class="hero">
 				<div class="hero__background">
@@ -741,6 +742,7 @@
 				</section>
 			</div>
 		</main>
+
 		<footer class="footer">
 			<div class="container">
 				<ul class="footer__social-list social__list">
@@ -758,5 +760,50 @@
 				<h6 class="copyright">Developed by IK Group &copy; 2023</h6>
 			</div>
 		</footer>
+
+		<div class="backdrop is-hidden">
+			<section class="mobmenu">
+				<button class="mobmenu__close" type="button" aria-label="Кнопка закриття мобільного меню">
+					<svg class="mobmenu__icon">
+						<use href="./img/sprite.svg#menu-close"></use>
+					</svg>
+				</button>
+
+				<nav class="mobmenu__nav">
+					<ul class="mobmenu__list">
+						<li class="mobmenu__item">
+							<a href="#about" class="mobmenu__link mobmenu__point1">Про нас</a>
+						</li>
+						<li class="mobmenu__item">
+							<a href="#prices" class="mobmenu__link mobmenu__point2">Послуги та ціни</a>
+						</li>
+						<li class="mobmenu__item">
+							<a href="#team" class="mobmenu__link mobmenu__point3">Майстри</a>
+						</li>
+						<li class="mobmenu__item">
+							<a href="#contacts" class="mobmenu__link mobmenu__point4">Контакти</a>
+						</li>
+					</ul>
+				</nav>
+
+				<a class="mobmenu__tel-link" href="tel:+380447777777">+380 44 777 77 77</a>
+				<a href="#registration" class="mobmenu__main-button mobmenu__point5"> онлайн-запис </a>
+
+				<ul class="mobmenu__social">
+					<li class="mobmenu__social-item">
+						<a class="mobmenu__social-link" href="https://www.instagram.com" target="_blank"
+							>Instagram
+						</a>
+					</li>
+					<li class="mobmenu__social-item">
+						<a class="mobmenu__social-link" href="https://www.youtube.com" target="_blank"
+							>Youtube
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+
+		<script src="./js/mobmenu.js"></script>
 	</body>
 </html>

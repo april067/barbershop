@@ -1,5 +1,6 @@
 .header {
 	position: absolute;
+	z-index: 1;
 
 	padding-top: 40px;
 	width: 100%;
@@ -117,4 +118,6 @@
 .header__mobmenu-button {
 	width: 40px;
 	height: 40px;
+
+	fill: var(--main-color);
 }

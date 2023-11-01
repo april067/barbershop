@@ -7,11 +7,9 @@ body {
 
 	color: var(--main-color);
 
-	// &.modal-open,
-
-	// &.menu-open {
-	// 	overflow: hidden;
-	// }
+	&.menu-open {
+		overflow: hidden;
+	}
 }
 
 h1,

@@ -290,6 +290,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-color);
 }
+body.menu-open {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -446,6 +449,7 @@ button {
 
 .header {
   position: absolute;
+  z-index: 1;
   padding-top: 40px;
   width: 100%;
 }
@@ -596,6 +600,36 @@ button {
 .header__mobmenu-button {
   width: 40px;
   height: 40px;
+  fill: var(--main-color);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  opacity: 1;
+  background-color: rgba(25, 28, 38, 0.9);
+  -webkit-box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.04), 0 4px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.04), 0 4px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.16);
+  -webkit-transition: opacity 250ms var(--timing-fn);
+  transition: opacity 250ms var(--timing-fn);
+}
+.backdrop.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.mobmenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  padding: 110px 20px 20px 20px;
+  background-color: var(--main-color);
 }
 
 .mobmenu__open {
@@ -607,10 +641,139 @@ button {
   }
 }
 
+.mobmenu__close {
+  position: absolute;
+  top: 48px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  fill: var(--secondary-color);
+}
+
 .mobmenu__icon {
   width: 40px;
   height: 40px;
-  fill: var(--main-color);
+}
+
+.mobmenu__nav {
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 480px) {
+  .mobmenu__nav {
+    margin-bottom: calc(50px + 14 * (100vw - 320px) / 160);
+  }
+}
+
+.mobmenu__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 480px) {
+  .mobmenu__item:not(:last-child) {
+    margin-bottom: calc(8px + 16 * (100vw - 320px) / 160);
+  }
+}
+
+.mobmenu__link,
+.mobmenu__tel-link {
+  font-size: 16px;
+  line-height: 1.667;
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
+  -webkit-transition: 250ms color var(--timing-fn);
+  transition: 250ms color var(--timing-fn);
+}
+@media screen and (max-width: 480px) {
+  .mobmenu__link,
+  .mobmenu__tel-link {
+    font-size: calc(14px + 2 * (100vw - 320px) / 160);
+  }
+}
+.mobmenu__link:hover, .mobmenu__link:focus,
+.mobmenu__tel-link:hover,
+.mobmenu__tel-link:focus {
+  color: var(--accent-color);
+}
+
+.mobmenu__tel-link {
+  margin-bottom: 24px;
+}
+
+.mobmenu__main-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  height: 40px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 1.333;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  -webkit-transition: color 250ms var(--timing-fn), background-color 250ms var(--timing-fn);
+  transition: color 250ms var(--timing-fn), background-color 250ms var(--timing-fn);
+}
+.mobmenu__main-button:hover, .mobmenu__main-button:focus {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+}
+
+.mobmenu__social {
+  margin-top: 64px;
+}
+@media screen and (max-width: 480px) {
+  .mobmenu__social {
+    margin-top: calc(50px + 14 * (100vw - 320px) / 160);
+  }
+}
+
+.mobmenu__social-item:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 480px) {
+  .mobmenu__social-item:first-child {
+    margin-bottom: calc(12px + 12 * (100vw - 320px) / 160);
+  }
+}
+
+.mobmenu__social-link {
+  font-size: 14px;
+  line-height: 1.357;
+  letter-spacing: 0.2em;
+  color: var(--secondary-color);
+  -webkit-transition: 250ms color var(--timing-fn);
+  transition: 250ms color var(--timing-fn);
+}
+.mobmenu__social-item:first-child .mobmenu__social-link::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: var(--secondary-color);
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .mobmenu__social-item:first-child .mobmenu__social-link::before {
+    width: calc(40px + 20 * (100vw - 320px) / 160);
+    margin-right: calc(10px + 10 * (100vw - 320px) / 160);
+  }
+}
+.mobmenu__social-link:hover, .mobmenu__social-link:focus {
+  color: var(--accent-color);
 }
 
 .hero__background {
