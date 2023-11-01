@@ -672,22 +672,22 @@
 						<h2 class="registration__title">Онлайн-запис</h2>
 
 						<form class="registration__form" action="">
-							<ul class="registration__list">
-								<li class="registration__item">
+							<div class="registration__point-cover">
+								<div class="registration__point registration__point--name">
 									<input class="registration__input" id="name" type="text" required />
 									<label class="registration__label" for="name">Ім'я*</label>
-								</li>
+								</div>
 
-								<li class="registration__item">
+								<div class="registration__point registration__point--tel">
 									<input class="registration__input" id="tel" type="tel" required />
 									<label class="registration__label" for="tel">Телефон*</label>
-								</li>
+								</div>
+							</div>
 
-								<li class="registration__item">
-									<textarea class="registration__textarea" name="comments" id="comments"></textarea>
-									<label class="registration__label-textarea" for="comments">Коментар</label>
-								</li>
-							</ul>
+							<div class="registration__point registration__point--comments">
+								<textarea class="registration__textarea" name="comments" id="comments"></textarea>
+								<label class="registration__label-textarea" for="comments">Коментар</label>
+							</div>
 
 							<button
 								class="registration__main-button"
