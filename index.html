@@ -43,10 +43,11 @@
 				</nav>
 
 				<div class="header__wrap">
-					<button class="header__main-button" type="button" aria-label="Кнопка онлайн запису">
+					<!-- <button class="header__main-button" type="button" aria-label="Кнопка онлайн запису">
 						онлайн-запис
-					</button>
-					<a class="header__tel-link" href="tel:+380447777777"> +380 44 777 77 77 </a>
+					</button> -->
+					<a class="header__main-button" href="#registration"> онлайн-запис </a>
+					<a class="header__tel-link" href="tel:+380447777777">+380 44 777 77 77</a>
 				</div>
 
 				<button
@@ -169,9 +170,10 @@
 							з клієнтами "на одній хвилі". Тому ми завжди готові вдосконалити кожного, хто до нас
 							приходить!
 						</p>
-						<button class="about__main-button" type="button" aria-label="Кнопка онлайн запису">
+						<!-- <button class="about__main-button" type="button" aria-label="Кнопка онлайн запису">
 							онлайн-запис
-						</button>
+						</button> -->
+						<a class="about__main-button" href="#registration"> онлайн-запис </a>
 					</div>
 				</div>
 			</section>
@@ -230,9 +232,10 @@
 							</ul>
 						</li>
 					</ul>
-					<button class="prices__main-button" type="button" aria-label="Кнопка онлайн запису">
+					<!-- <button class="prices__main-button" type="button" aria-label="Кнопка онлайн запису">
 						онлайн-запис
-					</button>
+					</button> -->
+					<a class="prices__main-button" href="#registration"> онлайн-запис </a>
 				</div>
 			</section>
 
@@ -667,7 +670,7 @@
 			</section>
 
 			<div class="section-wrapper">
-				<section class="registration">
+				<section class="registration" id="registration">
 					<div class="container">
 						<h2 class="registration__title">Онлайн-запис</h2>
 
@@ -700,7 +703,41 @@
 					</div>
 				</section>
 				<section class="contacts" id="contacts">
-					<div class="container"></div>
+					<div class="container">
+						<h2 class="contacts__title">Контакти</h2>
+						<div class="contacts__wrapper">
+							<address class="contacts__address">
+								<ul>
+									<li class="contacts__point">
+										<svg class="contacts__icon">
+											<use href="./img/sprite.svg#map-pin"></use>
+										</svg>
+										вул. Василькова, 7А Київ, 08132
+									</li>
+									<li class="contacts__point">
+										<a class="contacts__link" href="tel:+380447777777">
+											<svg class="contacts__icon">
+												<use href="./img/sprite.svg#phone"></use>
+											</svg>
+											+380 44 777 77 77
+										</a>
+									</li>
+									<li class="contacts__point">
+										<a class="contacts__link" href="mailto:barbershop@email.com">
+											<svg class="contacts__icon">
+												<use href="./img/sprite.svg#mail"></use>
+											</svg>
+											barbershop@email.com
+										</a>
+									</li>
+								</ul>
+							</address>
+							<div class="contacts__work-time">
+								<p class="contacts__subtitle">час роботи</p>
+								<p class="contacts__time">Щоденно з 9:00 до 22:00</p>
+							</div>
+						</div>
+					</div>
 				</section>
 			</div>
 		</main>

@@ -6,6 +6,13 @@
 	@media screen and (min-width: 1024px) {
 		width: 50%;
 	}
+
+	& .container {
+		@media screen and (min-width: 1024px) {
+			padding-left: 56px;
+			padding-right: 40px;
+		}
+	}
 }
 
 .registration__title {
@@ -88,7 +95,7 @@
 .registration__textarea {
 	display: block;
 	width: 100%;
-	padding: 0 8px 0 82px;
+	padding-left: 82px;
 	border: none;
 
 	color: var(--main-color);

@@ -1,5 +1,9 @@
 @mixin main-button($color: var(--main-color)) {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	// display: block;
 	width: 160px;
 	height: 40px;
 	border: 1px solid var(--accent-color);
