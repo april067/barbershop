@@ -3,21 +3,13 @@
 		openMenuBtn: document.querySelector('.mobmenu__open'),
 		closeMenuBtn: document.querySelector('.mobmenu__close'),
 		backdrop: document.querySelector('.backdrop'),
-		closeMenuItem1: document.querySelector('.mobmenu__point1'),
-		closeMenuItem2: document.querySelector('.mobmenu__point2'),
-		closeMenuItem3: document.querySelector('.mobmenu__point3'),
-		closeMenuItem4: document.querySelector('.mobmenu__point4'),
-		closeMenuItem5: document.querySelector('.mobmenu__point5'),
+		closeMenuItems: document.querySelectorAll('.mobmenu__point'),
 	}
 
 	refs.openMenuBtn.addEventListener('click', toggleMenu)
 	refs.closeMenuBtn.addEventListener('click', toggleMenu)
 
-	refs.closeMenuItem1.addEventListener('click', closeMenu)
-	refs.closeMenuItem2.addEventListener('click', closeMenu)
-	refs.closeMenuItem3.addEventListener('click', closeMenu)
-	refs.closeMenuItem4.addEventListener('click', closeMenu)
-	refs.closeMenuItem5.addEventListener('click', closeMenu)
+	refs.closeMenuItems.forEach((item) => item.addEventListener('click', closeMenu))
 
 	function toggleMenu() {
 		refs.backdrop.classList.toggle('is-hidden')
